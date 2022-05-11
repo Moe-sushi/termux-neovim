@@ -1,7 +1,7 @@
 来自Github@Optixal  
 原项目地址:https://github.com/Optixal/neovim-init.vim
 ### 截图:
-
+![](https://github.com/Moe-hacker/termux-neovim/raw/main/screenshot-neovim.jpg)
 ### 安装:  
 可能需要科学上网。  
 ```sh
