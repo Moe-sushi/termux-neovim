@@ -1,11 +1,11 @@
 From Github@Optixal  
 [neovim-init.vim](https://github.com/Optixal/neovim-init.vim)
 ### Screenshot:
-![](https://github.com/Moe-hacker/termux-neovim/raw/main/screenshot-neovim.jpg)
+![](https://github.com/Moe-sushi/termux-neovim/raw/main/screenshot-neovim.jpg)
 ### Installation:   
 ```sh
 apt install git wget nodejs neovim python3 clang python3 curl bat ripgrep silversearcher-ag
-git clone https://github.com/Moe-hacker/termux-neovim
+git clone https://github.com/Moe-sushi/termux-neovim
 cd termux-neovim
 mkdir -p ~/.config/nvim
 cp init.vim ~/.config/nvim/
