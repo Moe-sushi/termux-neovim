@@ -40,7 +40,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-abolish'
-"Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -53,7 +53,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'wellle/context.vim'
+" Plug 'wellle/context.vim'
 
 " Entertainment
 Plug 'dansomething/vim-hackernews'
@@ -61,13 +61,11 @@ Plug 'dansomething/vim-hackernews'
 call plug#end()
 
 """ Main Configurations
-filetype plugin indent on
+" filetype plugin indent on
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 set wildmode=longest,list,full wildmenu
 set ruler laststatus=2 showcmd showmode
-set list listchars=trail:»,tab:»-
-set fillchars+=vert:\ 
 set nowrap breakindent
 set encoding=utf-8
 set textwidth=0
@@ -81,7 +79,6 @@ set title
 function! TransparentBackground()
     highlight Normal guibg=NONE ctermbg=NONE
     highlight LineNr guibg=NONE ctermbg=NONE
-    set fillchars+=vert:\│
     highlight VertSplit gui=NONE guibg=NONE guifg=#444444 cterm=NONE ctermbg=NONE ctermfg=gray
 endfunction
 
@@ -135,27 +132,9 @@ nmap ga <Plug>(EasyAlign)
 
 " indentLine
 let g:indentLine_char_list = ['│','╎', '┆', '┊']
-let g:indentLine_first_char = '┃'
-let g:indentLine_start_level = 1
 let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_conceallevel = 1
-let g:indentLine_setConceal = 1
-let g:indentLine_defaultGroup = 'NonText'
 let g:indentLine_enabled = 1
-let g:indentLine_setColors = 0
-
-let g:indent_guides_guide_size=1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
-" Disable indentLine from concealing json and markdown syntax (e.g. ```)
-let g:vim_json_syntax_conceal = 0
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_conceal_code_blocks = 0
-
+set list lcs=tab:\┆\
 "Rainbow
 let g:rainbow_active = 1
 
@@ -362,7 +341,7 @@ nmap \\ <leader>q
 nmap <leader>w :TagbarToggle<CR>
 nmap \| <leader>w
 nmap <leader>ee :Colors<CR>
-nmap <leader>ea :AirlineTheme 
+nmap <leader>ea :AirlineTheme
 nmap <leader>e1 :call ColorDracula()<CR>
 nmap <leader>e2 :call ColorSeoul256()<CR>
 nmap <leader>e3 :call ColorForgotten()<CR>
@@ -542,3 +521,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 colorscheme catppuccin-mocha
 let g:airline_theme='nord'
+highlight Comment cterm=NONE gui=NONE
